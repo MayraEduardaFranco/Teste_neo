@@ -31,7 +31,11 @@ go get github.com/lib/pq
 ```
 "user= seu-usuário dbname= nome-do-seu-db password= senha sslmode= modo-de-conexão"
 ```
-3. Após isso execute o programa no console
+3. Modifique no código o caminho do arquivo txt, conforme local que está armazenado o seu arquivo
+ ```
+ os.Open(caminho do arquivo)
+  ```
+4. Após isso execute o programa no console
 ```+++++++++++++++++++++++++++++++++++++++++
 go run main.go
 ```
