@@ -51,7 +51,7 @@ func main() {
 	}
 
 	// leitura do arquivo .txt
-	file, err := os.Open("C:\\Users\\franc\\Downloads\\base_teste.txt")
+	file, err := os.Open("base_teste.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -94,7 +94,7 @@ func main() {
 
 		// Insere os dados na tabela criada de banco de dados, realizo tratamenento dos Nulls para todas as colunas
 		_, err = db.Exec(`
-			INSERT INTO clientes1 (cpf, private, incompleto, data_ultima_compra, ticket_medio, ticket_ultima_compra, loja_frequente, loja_ultima_compra) 
+			INSERT INTO clientes (cpf, private, incompleto, data_ultima_compra, ticket_medio, ticket_ultima_compra, loja_frequente, loja_ultima_compra) 
 			VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
 			nullIf(columns[0]), // CPF
 			nullIf(columns[1]), // PRIVATE
