@@ -1,6 +1,7 @@
 ALTER TABLE clientes ADD COLUMN cnpj_valido_ultimacompra BOOLEAN;
 ALTER TABLE clientes ADD COLUMN cpf_valido BOOLEAN;
 ALTER TABLE clientes ADD COLUMN cnpj_valido_lojafrequente BOOLEAN;
+
 UPDATE clientes
 SET cpf_valido = validar_cpf(cpf);
 UPDATE clientes
